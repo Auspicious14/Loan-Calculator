@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <style>
+        body {
+            background: rgb(104, 104, 209);
+        }
+
+        .circle-design img, .circle-design-2 {
+            margin: 0;
+            position: absolute;
+            right: 0;
+            
+        }
+
+        .circle-design-2 {
+            width: 200px;
+            height: 200px;
+            position: fixed;
+            background: rgb(177, 247, 243);
+            border-radius: 50% 50% 50% 0;
+            bottom: 0;
+            left: 0;
+        }
+        /* .square {
+            width: 200px;
+            height: 200px;
+            background: white;
+        } */
+
+        img {
+            width: 400px;
+
+        }
+
+        .container {
+            width: 400px;
+            height: 600px;
+            /* box-shadow: .1rem .2rem .2rem .2rem grey; */
+            margin: 0 20rem;
+            padding: .5rem 1rem;
+            background: white;
+        }
+
+        .head, h2 {
+            margin: .2rem 0;
+            padding: 0 5rem;
+            font-family: fira code;
+        }
+        
+        h2 {
+            margin: 1rem 4rem;
+        }
+
+        label {
+            display: block;
+        }
+
+        .amount, .percentage, .year {
+            width: 150px;
+            height: 20px;
+            /* background: grey; */
+            margin: 1rem 0 .5rem 0;
+            font-family: arvo;
+        }
+
+        input {
+            width: 90%;
+        }
+
+        button {
+            width: 100%;
+            background: rgb(101, 101, 238);
+            color: white;
+            margin-top: 2rem;
+            border-radius: .2rem;
+            font-weight: bold;
+            font-family: fira code;
+            border: none;
+            padding: .3rem 0;
+        }
+
+        .overall-result {
+            margin-top: 2rem;
+    </style>
+</head>
+<body>
+    <div class="circle-design">
+        <img src="./image/Girl.jpg" alt="">
+    </div> 
+    
+    <div class="circle-design-2">
+    </div>
+    <div class="square"></div>
+    <div class="container">
+        <h2 class="head">Loan Calculator</h2>
+        <form id="form" action="">
+            <div class="loan-amount">
+                <label for="amount" class="amount">Amount($)</label>
+                <input type="number" name="amount" id="amount">
+            </div>
+            <div class="loan-percentage">
+                <label for="percentage" class="percentage">Percentage(%)</label>
+                <input type="number" name="percentage" id="percentage">
+            </div>
+            <div class="loan-year">
+                <label for="year" class="year">Year</label>
+                <input type="number" name="year" id="year">
+            </div>
+            <button id="button" type="submit">Calculate</button>
+        </form>
+
+        
+        
+
+
+
+        <h2>Results</h2>
+        <div class="overall-result">
+            <div class="result-amount">
+                <div class="amount">Monthly Payment</div>
+                <input type="number" name="amount" id="result-amount">
+            </div>
+            <div class="result-percentage">
+                <div class="percentage">Total Payment</div>
+                <input type="number" name="percentage" id="result-percentage">
+            </div>
+            <div class="result-year">
+                <div class="year">Total Interest</div>
+                <input type="number" name="year" id="result-year">
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
